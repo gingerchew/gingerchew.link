@@ -33,15 +33,28 @@
   :root {
     --color-gray-20: #e0e0e0;
     --color-gray-50: #C0C0C0;
-    --color-gray-90: var(--light);
+    --color-gray-90: gold;
 
     /* --text-color is assigned to --color-gray-_ above */
     --text-color: var(--color-gray-90);
-    --text-color-link: #fff;
-    --text-color-link-visited:#dfdfdf;/* #75fffe; /* var(--light) with more brightness */
+    --text-color-link:#fff;
+    --text-color-link-visited:#fff;/* #75fffe; /* var(--light) with more brightness */
 
-    --background-color: var(--dark);
+    --background-color: #610cb0;
   }
+}
+
+:root.dark {
+  --color-gray-20: #e0e0e0;
+  --color-gray-50: #C0C0C0;
+  --color-gray-90: gold;
+
+  /* --text-color is assigned to --color-gray-_ above */
+  --text-color: var(--color-gray-90);
+  --text-color-link:#fff;
+  --text-color-link-visited:#fff;/* #75fffe; /* var(--light) with more brightness */
+
+  --background-color: #610cb0;
 }
 
 
@@ -112,6 +125,26 @@ header:after {
   display: table;
   clear: both;
 }
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-inline: max(1vw, 15px);
+  padding-block: max(1vh, 10px);
+  pointer-events: none;
+}
+footer a {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  color: var(--text-color);
+  pointer-events: auto;
+}
+
+footer svg {
+  color: var(--text-color);
+}
 
 table {
   margin: 1em 0;
@@ -153,15 +186,16 @@ code {
   display: flex;
   flex-flow: column;
   text-align: center;
-  gap: 1.5rem;
+  gap: clamp(1.5rem, 1rem + 5vw, 3rem);
 }
 .social-list span {
   display: block;
-  font-size: clamp(21px, 21px + 5vw, 50px);
+  font-size: clamp(18px, 18px + 1vw, 50px);
+  font-weight: bold;
 }
 
 .social-list li {
-  font-size: clamp(18px, 18px + 2vw, 50px);
+  font-size: clamp(16px, 16px + 1vw, 50px);
 }
 /* Header */
 .home {

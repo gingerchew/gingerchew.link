@@ -20,28 +20,28 @@
 
 module.exports = [
     {
-        "title":"Here! (Under Construction)",
-        "url":"https://ginger.wtf/",
-        "social":"Website"
+        title:"Here! (Under Construction)",
+        url:"https://ginger.wtf/",
+        social:"Website"
     },
     {
-        "title": "@gingercheww",
-        "url":"https://twitter.com/gingercheww",
-        "social":"Twitter"
+        title:"@gingerchew",
+        url:"https://cohost.org/gingerchew",
+        social:"Cohost!"
     },
     {
-        "title":"@gingerchew",
-        "url":"https://cohost.org/gingerchew",
-        "social":"Cohost!"
+        title:"@gingerchew@queer.party",
+        url:"https://queer.party/@gingerchew",
+        social:"Mastodon"
     },
     {
-        "title":"@gingerchew@queer.party",
-        "url":"https://queer.party/@gingerchew",
-        "social":"Mastodon"
+        title: "@gingercheww",
+        url:"https://twitter.com/gingercheww",
+        social:"Twitter"
     },
     {
-        "title":"My Code",
-        "url":"https://github.com/gingerchew",
-        "social":"Github"
+        title:"gingerchew#6318",
+        url: "https://discordapp.com/users/gingerchew#6318",
+        social: "Discord"
     }
 ]

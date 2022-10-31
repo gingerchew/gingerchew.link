@@ -1,0 +1,21 @@
+{
+  "title": "Find Me!",
+  "url": "https://gingerchew.link/",
+  "language": "en",
+  "description": "Wow, things are pretty wild there aren't they?? Here's some other ways to find me!",
+  "feed": {
+    "subtitle": "",
+    "filename": "",
+    "path": "",
+    "id": ""
+  },
+  "jsonfeed": {
+    "path": "",
+    "url": ""
+  },
+  "author": {
+    "name": "Ginger",
+    "email": "gingerchew+link@pm.me",
+    "url": "https://ginger.wtf/"
+  }
+}

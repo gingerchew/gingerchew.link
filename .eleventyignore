@@ -1,1 +1,10 @@
 README.md
+sitemap.xml.njk
+tags-list.njk
+archive.njk
+tags.njk
+feed/*
+posts/*
+img/*
+about/*
+page-list.njk

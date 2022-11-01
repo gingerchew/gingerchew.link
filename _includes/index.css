@@ -13,33 +13,38 @@
  *   -fg: #9cfffe
  */
 /* Theme colors */
-:root {
-  --dark: blueviolet;
-  --light: #9cfffe;
-
+:root,
+:root.light {
+  /* --dark: blueviolet; */
+  --dark: hsl(271, 76%, 53%);
+  /* --light: #9cfffe; */
+  --light: hsl(179, 100%, 81%);
+  --dur: 0.25s;
+  --ease: cubic-bezier(0.5,0,1,1);
   --color-gray-20: #e0e0e0;
   --color-gray-50: #C0C0C0;
   --color-gray-90: var(--dark);
 
-  --background-color: rgba(156, 255, 254, 0.25);
+  --background-color: white;
 
   --text-color: var(--color-gray-90);
-  --text-color-link: #e74ee7; /* blueviolet with more shade */
-  --text-color-link-visited: #e53de5; /* blueviolet with more shade */
+  --text-color-link: hsl(300, 76%, 61%); /* blueviolet with more shade */
+  --text-color-link-visited:hsl(300, 76%, 57%); /* blueviolet with more shade */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-gray-20: #e0e0e0;
     --color-gray-50: #C0C0C0;
-    --color-gray-90: gold;
+    /* --color-gray-90: gold; */
+    --color-gray-90: hsl(51, 100%, 50%);
 
     /* --text-color is assigned to --color-gray-_ above */
     --text-color: var(--color-gray-90);
     --text-color-link:#fff;
     --text-color-link-visited:#fff;/* #75fffe; /* var(--light) with more brightness */
 
-    --background-color: #610cb0;
+    --background-color: hsl(271, 87%, 37%);
   }
 }
 
@@ -75,15 +80,25 @@ body {
   font-family: var(--font-family);
   color: var(--text-color);
   background-color: var(--background-color);
+  transition: all var(--dur) var(--ease);
+  transition-property: color, background-color;
 }
+
 
 a[href] {
   color: var(--text-color-link);
   text-decoration-style: wavy;
   text-underline-offset: 10px;
   text-decoration-skip-ink: none;
+  transition: all var(--dur) var(--ease);
+  transition-property: color;
 }
-
+a[href]:hover {
+  color: var(--text-color);
+}
+a[href]:focus {
+  text-decoration-style: dotted;
+}
 ul[role="list"] {
   list-style-type: none;
   padding: 0;
@@ -107,6 +122,13 @@ header:after {
   display: table;
   clear: both;
 }
+button {
+  cursor: pointer;
+  transition: transform var(--dur) var(--ease);
+}
+button:active {
+  transform: scale(1.5);
+}
 footer {
   position: fixed;
   bottom: 0;
@@ -116,16 +138,25 @@ footer {
   padding-block: max(1vh, 10px);
   pointer-events: none;
 }
-footer a {
+footer > * + * {
+  margin-inline-start: 1rem;
+}
+footer a,
+footer button {
   display: inline-block;
   height: 32px;
-  width: 32px;
+  width: auto;
   color: var(--text-color);
   pointer-events: auto;
 }
-
+footer button {
+  background-color: transparent;
+  border-color: transparent;
+}
 footer svg {
   color: var(--text-color);
+  max-width: 100%;
+  width: 32px;
 }
 
 /* Social List */

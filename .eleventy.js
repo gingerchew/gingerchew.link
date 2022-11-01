@@ -1,13 +1,30 @@
 const fs = require("fs");
+// const purge = require('eleventy-plugin-purgecss');
 
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
+const postcss = require('postcss');
+const postcssrc = require('postcss-load-config');
+
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.addNunjucksAsyncFilter('postcss', async (content, callback) => {
+    let { plugins, options } = await postcssrc();
+
+    let result = await postcss(plugins).process(content, options);
+    callback(null, result.css);
+  })
+
+
   // Copy the `img` and `css` folders to the output
   // eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
-  
+  // eleventyConfig.addPassthroughCopy("css");
+  /*
+  eleventyConfig.addPlugin(purge, {
+    quiet: false,
+  });
+  */
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
     html: true,

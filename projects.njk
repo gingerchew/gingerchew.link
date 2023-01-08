@@ -1,0 +1,19 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: projects
+  order: 2
+---
+<ul role="list" class="social-list">
+{% for data in projects %}
+  <li>
+    <span>፨ {{ data.name }} ፨</span>
+    <span><small>{{ data.description }}</small></span>
+    <a rel="me" href="{{ data.url }}">See the {{ data.name }} repo.</a>
+  </li>
+{% endfor %}
+  <li>
+    <span>&lt;&lt; Back</span>
+    <a href="/">Let's go!</a>
+  </li>
+</ul>

@@ -24,6 +24,11 @@ const repos = [
         name: "GLightbox",
         url: "biati-digital/glightbox",
         description: "Contributor"
+    },
+    {
+        name: "BiteSize",
+        url: "gingerchew/bitesize.land",
+        description: "Get the byte size of your code, gzip and brotli included."
     }
 ]
 

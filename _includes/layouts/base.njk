@@ -6,8 +6,8 @@
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
 
-    {#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
     <meta name="generator" content="{{ eleventy.generator }}">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 16 16'><text x='0' y='14'>🔗</text></svg>" />
     <script>
       if (localStorage.getItem('dm')) {
         document.documentElement.classList.add(localStorage.getItem('dm'));

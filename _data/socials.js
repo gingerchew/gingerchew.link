@@ -35,13 +35,8 @@ module.exports = [
         social:"Mastodon"
     },
     {
-        title: "@gingercheww",
-        url:"https://twitter.com/gingercheww",
-        social:"Twitter"
-    },
-    {
-        title:"gingerchew#6318",
-        url: "https://discordapp.com/users/gingerchew#6318",
+        title:"gingerchew",
+        url: "https://discordapp.com/users/gingerchew",
         social: "Discord"
     }
 ]

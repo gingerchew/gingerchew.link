@@ -18,7 +18,7 @@ const repos = [
     {
         name: "resourcesand.help",
         url: "gingerchew/resourcesand.help",
-        description: "A collection of easy to parse resources for those in need of help."
+        description: "No Longer Active"
     },
     {
         name: "GLightbox",

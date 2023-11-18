@@ -20,9 +20,9 @@
 
 module.exports = [
     {
-        title:"Here! (Under Construction)",
+        title:"ginger.wtf",
         url:"https://ginger.wtf/",
-        social:"Website"
+        social:"My blog"
     },
     {
         title:"@gingerchew",
